@@ -20,14 +20,14 @@ function NewPlan() {
   const navigate = useNavigate();
   const qc = useQueryClient();
   const [f, setF] = useState({ title: "", description: "", goal: "", deadline: "" });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState<Partial<Record<"title" | "description" | "goal" | "deadline", string>>>({});
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   async function submit(e: FormEvent) {
     e.preventDefault();
     if (saving) return;
-    const errs: Record<string, string> = {};
+    const errs: Partial<Record<"title" | "description" | "goal" | "deadline", string>> = {};
     if (!f.title.trim()) errs.title = "Plan title is required.";
     if (!f.description.trim()) errs.description = "Task description is required.";
     if (!f.goal.trim()) errs.goal = "Desired outcome is required.";
