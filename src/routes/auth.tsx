@@ -8,10 +8,10 @@ import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Wordmark } from "@/components/AppHeader";
 
-type Search = { mode?: "signup" | "signin" };
+type Search = { mode?: "signup" };
 
 export const Route = createFileRoute("/auth")({
-  validateSearch: (s: Record<string, unknown>): Search => ({ mode: s.mode === "signup" ? "signup" : undefined }),
+  validateSearch: (s: Record<string, unknown>): Search => ({ mode: s["mode"] === "signup" ? "signup" : undefined }),
   head: () => ({
     meta: [
       { title: "Sign in — TaskBridge" },
