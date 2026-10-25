@@ -97,6 +97,16 @@ All tests ran on the published app with two separate accounts, and data changes 
 
 ---
 
+## 📁 Project Files
+
+| File | Contents |
+|---|---|
+| [README.md](./README.md) | Project overview, design, and test results |
+| [database-schema.md](./database-schema.md) | Tables, constraints, RLS policies, verification, and SQL |
+| [lovable-build-prompt.md](./lovable-build-prompt.md) | The prompt used to build the app in Lovable |
+
+---
+
 ## 🛠️ Tech Stack
 
 | Tool | Role |
